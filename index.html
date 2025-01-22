@@ -32,7 +32,7 @@
                     JavaScript</strong>.
                 Toujours à la recherche de nouvelles opportunités pour créer des interfaces modernes et performantes.
             </p>
-            <img src="./Image/profile.jpg"  class="ppperso" alt="Photo de Tom Marchal">
+            <img src="./Image/profile.jpg" class="ppperso" alt="Photo de Tom Marchal">
         </div>
     </section>
 
@@ -82,38 +82,39 @@
         <h2 data-aos="fade-up">Mes Projets</h2>
         <div class="projects-container">
             <div class="project" data-aos="fade-up">
-                <img src="./Image/qwentaimg.PNG" alt="Projet Qwenta"/>
+                <img src="./Image/qwentaimg.PNG" alt="Projet Qwenta" />
                 <h3>Qwenta - Menu Maker</h3>
                 <p>Planification d’un site web complet avec spécifications techniques et gestion de projet.</p>
                 <a href="https://github.com/Akoji-0/Qwenta" class="btn" target="_blank">Voir le projet</a>
             </div>
             <div class="project" data-aos="fade-up" data-aos-delay="200">
-                <img src="./Image/Kasaimg.PNG" alt="Projet Kasa"/>
+                <img src="./Image/Kasaimg.PNG" alt="Projet Kasa" />
                 <h3>Kasa - Plateforme de location immobilière</h3>
                 <p>Application affichant des logements avec informations détaillées à partir d’un fichier JSON.</p>
                 <a href="https://kasa-roan-beta.vercel.app/" class="btn" target="_blank">Voir le site</a>
             </div>
             <div class="project" data-aos="fade-up">
-                <img src="./Image/ArgentBankimg.PNG" alt="Projet ArgentBank"/>
+                <img src="./Image/ArgentBankimg.PNG" alt="Projet ArgentBank" />
                 <h3>ArgentBank - Banque en ligne</h3>
                 <p>Implémenter le front-end d'une application bancaire avec React</p>
                 <a href="https://github.com/Akoji-0/ArgentBank" class="btn" target="_blank">Voir le projet</a>
             </div>
             <div class="project" data-aos="fade-up" data-aos-delay="200">
-                <img src="./Image/shémaomf.PNG" alt="Projet Ohmyfood"/>
+                <img src="./Image/shémaomf.PNG" alt="Projet Ohmyfood" />
                 <h3>ohmyfood - Restauration</h3>
                 <p>Site “mobile first” qui répertorie les menus de restaurants gastronomiques.</p>
                 <a href="https://akoji-0.github.io/ohmyfood/" class="btn" target="_blank">Voir le site</a>
             </div>
         </div>
     </section>
-    
-    
+
+
 
 
     <section id="contact" class="section">
         <h2 data-aos="fade-up">Me Contacter</h2>
-        <p data-aos="fade-up" data-aos-delay="200">N'hésitez pas à me laisser un message, je vous répondrai dès que possible !</p>
+        <p data-aos="fade-up" data-aos-delay="200">N'hésitez pas à me laisser un message, je vous répondrai dès que
+            possible !</p>
         <form action="#" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="400">
             <div class="form-group">
                 <label for="name">Nom</label>
@@ -129,12 +130,36 @@
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Votre message précis..." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message précis..."
+                    required></textarea>
             </div>
             <button type="submit" class="btn">Envoyer</button>
         </form>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            (function () {
+                emailjs.init("Cx-Hhf8GmaQrJgzrV"); // Remplacez par votre clé publique EmailJS
+            })();
+
+            document.querySelector(".contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Empêche le rechargement de la page
+
+                const formData = new FormData(this);
+                const data = Object.fromEntries(formData.entries());
+
+                emailjs.send("service_efgri3a", "template_0iz6q9y", data)
+                    .then(function (response) {
+                        alert("Message envoyé avec succès !");
+                        document.querySelector(".contact-form").reset(); // Réinitialise le formulaire
+                    }, function (error) {
+                        alert("Erreur lors de l'envoi : " + JSON.stringify(error));
+                    });
+            });
+        </script>
+
+
     </section>
-    
+
 
     <footer>
         <p>© 2025 Tom Marchal. Tous droits réservés.</p>
@@ -144,7 +169,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         // Initialisation de AOS avec une librairie externe pour anim
-        AOS.init({ 
+        AOS.init({
             duration: 1200,
             easing: 'ease-in-out',
             once: true

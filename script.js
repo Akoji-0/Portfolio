@@ -5,5 +5,3 @@ document.querySelectorAll('.scroll').forEach(link => {
         target.scrollIntoView({ behavior: 'smooth' });
     });
 });
-
-
