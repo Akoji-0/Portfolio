@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Marchal - Développeur Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+    <header id="hero">
+        <video autoplay muted loop id="background-video">
+            <source src="background.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="fade-in">Tom Marchal</h1>
+            <p class="fade-in delay">Développeur Web</p>
+            <a href="#about" class="btn scroll">En savoir plus</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <h2 data-aos="fade-up">À propos de moi</h2>
+        <div class="content">
+            <p data-aos="fade-up" data-aos-delay="600">
+                Je suis Tom Marchal, un développeur passionné spécialisé en <strong>HTML, CSS, React et
+                    JavaScript</strong>.
+                Toujours à la recherche de nouvelles opportunités pour créer des interfaces modernes et performantes.
+            </p>
+            <img src="profile.jpg"  class="ppperso" alt="Photo de Tom Marchal">
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 data-aos="fade-up">Compétences</h2>
+        <div class="skills-container">
+            <div class="skill" data-aos="fade-right">
+                <span>HTML</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill" data-aos="fade-right" data-aos-delay="200">
+                <span>CSS</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill" data-aos="fade-right" data-aos-delay="400">
+                <span>React</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill" data-aos="fade-right" data-aos-delay="600">
+                <span>JavaScript</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill" data-aos="fade-right" data-aos-delay="800">
+                <span>Photoshop</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill" data-aos="fade-right" data-aos-delay="1000">
+                <span>Git</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 data-aos="fade-up">Mes Projets</h2>
+        <div class="projects-container">
+            <div class="project" data-aos="fade-up">
+                <img src="qwentaimg.PNG" alt="Projet Qwenta"/>
+                <h3>Qwenta - Menu Maker</h3>
+                <p>Planification d’un site web complet avec spécifications techniques et gestion de projet.</p>
+                <a href="https://github.com/Akoji-0/Qwenta" class="btn" target="_blank">Voir le projet</a>
+            </div>
+            <div class="project" data-aos="fade-up" data-aos-delay="200">
+                <img src="Kasaimg.PNG" alt="Projet Kasa"/>
+                <h3>Kasa - Plateforme de location immobilière</h3>
+                <p>Application affichant des logements avec informations détaillées à partir d’un fichier JSON.</p>
+                <a href="https://kasa-roan-beta.vercel.app/" class="btn" target="_blank">Voir le site</a>
+            </div>
+            <div class="project" data-aos="fade-up">
+                <img src="ArgentBankimg.PNG" alt="Projet ArgentBank"/>
+                <h3>ArgentBank - Banque en ligne</h3>
+                <p>Implémenter le front-end d'une application bancaire avec React</p>
+                <a href="https://github.com/Akoji-0/ArgentBank" class="btn" target="_blank">Voir le projet</a>
+            </div>
+            <div class="project" data-aos="fade-up" data-aos-delay="200">
+                <img src="shémaomf.PNG" alt="Projet Ohmyfood"/>
+                <h3>ohmyfood - Restauration</h3>
+                <p>Site “mobile first” qui répertorie les menus de restaurants gastronomiques.</p>
+                <a href="https://akoji-0.github.io/ohmyfood/" class="btn" target="_blank">Voir le site</a>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+    <section id="contact" class="section">
+        <h2 data-aos="fade-up">Me Contacter</h2>
+        <p data-aos="fade-up" data-aos-delay="200">N'hésitez pas à me laisser un message, je vous répondrai dès que possible !</p>
+        <form action="#" method="post" class="contact-form" data-aos="fade-up" data-aos-delay="400">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre adresse email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Sujet</label>
+                <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message précis..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Tom Marchal. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialisation de AOS avec une librairie externe pour anim
+        AOS.init({ 
+            duration: 1200,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
